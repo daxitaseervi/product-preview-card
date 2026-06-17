@@ -1,0 +1,161 @@
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--cream);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  width: 600px;
+  background-color: var(--white);
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 50%;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+}
+
+.product-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: Fraunces, sans-serif;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+.description {
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.discount-price {
+  font-family: Fraunces, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--green-500);
+  display: inline-block;
+  margin-right: 22px;
+}
+
+.mrp-price {
+  display: inline-block;
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: var(--green-500);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn:active {
+  background-color: var(--green-700);
+}
+
+.btn img {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  main {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .product-card {
+    max-width: 250px;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  .product-image {
+    height: 250px;
+    width: 100%;
+  }
+
+  .product-image img {
+    height: 250px;
+    object-fit: cover;  
+  }
+
+  .product-content {
+    max-width: 100%;
+    margin: 25px;
+  }
+}
+
+.attribution { 
+  font-size: 0.6875rem; 
+  text-align: center; 
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
